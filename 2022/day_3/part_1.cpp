@@ -17,7 +17,7 @@ int main(int argc, char** argv) {
         std::sort(first_compartment.begin(), first_compartment.end());
         std::sort(second_compartment.begin(), second_compartment.end());
 
-        auto it = std::set_intersection(
+        std::set_intersection(
             first_compartment.begin(), first_compartment.end(),
             second_compartment.begin(), second_compartment.end(),
             std::back_inserter(intersection)
