@@ -1,7 +1,11 @@
 #include <fstream>
 #include <string>
 
-static inline bool is_fully_included(size_t first_start, size_t first_end, size_t second_start, size_t second_end) {
+static inline bool is_fully_included(const size_t& first_start,
+                                     const size_t& first_end, 
+                                     const size_t& second_start, 
+                                     const size_t& second_end) 
+{
     return (first_start >= second_start && first_end <= second_end) || 
            (second_start >= first_start && second_end <= first_end);
 }
