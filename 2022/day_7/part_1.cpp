@@ -11,6 +11,7 @@ class Node {
         Node* parent;
         std::vector<Node*> children;
         size_t dir_size;
+        
         Node(Node* parent) : parent(parent), dir_size(0) {}
 
         Node* add_child(Node* child) {
@@ -53,6 +54,7 @@ int main(int argc, char** argv) {
 
             continue;
         }
+
         std::string cmd = line.substr(2, 2);
         if(cmd == "cd") {
             std::string dir = line.substr(5, std::string::npos);
