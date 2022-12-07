@@ -27,8 +27,7 @@ void increment_dir_sizes(Node* node, const size_t& size) {
 }
 
 size_t sum_dirs_at_most_100000(Node* node) {
-    size_t sum = 0;
-    if(node->dir_size <= 100000) sum += node->dir_size;
+    size_t sum = (node->dir_size <= 100000) ? (node->dir_size) : (0);
 
     for(Node* child : node->children)
         sum += sum_dirs_at_most_100000(child);
