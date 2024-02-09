@@ -14,7 +14,7 @@ class Solver
 
     public:
         Solver(std::ifstream& in, std::ofstream& out) : in(in), out(out), enable_debug(false) { this->solve(); }
-        Solver(std::ifstream& in, std::ofstream& out, bool enable_debug) : in(in), out(out), enable_debug(enable_debug) {}
+        Solver(std::ifstream& in, std::ofstream& out, bool enable_debug) : in(in), out(out), enable_debug(enable_debug) { this->solve(); }
         ~Solver();
 };
 
