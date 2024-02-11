@@ -50,7 +50,6 @@ std::unordered_set<byte> Solver::parse_winning_numbers(const std::string& line)
     for(size_t i = 0; i < winning_numbers_str.size(); i += 3)
     {
         const std::string number_str = winning_numbers_str.substr(i, 2);
-        this->log("Extracted number from winning numbers: " + number_str);
         winning_numbers.insert(std::stoul(number_str) & 0xFF);
     }
 
@@ -68,7 +67,6 @@ size_t Solver::count_winning_numbers(const std::string& line, const std::unorder
     for(size_t i = 0; i < extracted_numbers_str.size(); i += 3)
     {
         const std::string number_str = extracted_numbers_str.substr(i, 2);
-        this->log("Extracted number from extracted numbers: " + number_str);
 
         byte number = std::stoul(number_str) & 0xFF;
 
